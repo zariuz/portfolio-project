@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../logo.png';
 // REACT FONTAWESOME IMPORTS
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
@@ -26,32 +25,32 @@ const Navbar = () => {
           <ul className="navbar-nav ml-auto">
             <li className="nav-item active">
               <a className="nav-link" href="#">
-                Home <span className="sr-only">(current)</span>
+                Главная <span className="sr-only">(current)</span>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                about me
+                Обо мне
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                services
+                Навыки
+              </a>
+            </li>
+            {/* <li className="nav-item">
+              <a className="nav-link" href="#">
+                Опыт работы
+              </a>
+            </li> */}
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Портфолио
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                experience
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                portfolio
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                contacts
+                Контакты
               </a>
             </li>
           </ul>
