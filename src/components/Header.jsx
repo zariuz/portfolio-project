@@ -1,6 +1,6 @@
 import React from 'react';
 import Typed from 'react-typed';
-import {Link} from 'react-scroll';
+import { Link } from 'react-scroll';
 
 const Header = () => {
   return (
@@ -18,7 +18,7 @@ const Header = () => {
         <Link
           smooth={true}
           to="contacts"
-          offset={-110}
+          offset={-83}
           href="#"
           className="btn-main-offer">
           связаться со мной

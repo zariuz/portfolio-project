@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-scroll';
+import { Link } from 'react-scroll';
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -57,25 +57,25 @@ const Footer = () => {
             <div className="d-flex justify-content-center">
               <FacebookShareButton
                 url={'https://github.com/zariuz'}
-                quote={'FullStack Developer'}
-                hashtag="#javascript">
+                quote={'Front-End Developer'}
+                hashtag="#JavaScript #React">
                 <FacebookIcon className="mx-3" size={36} />
               </FacebookShareButton>
               <TwitterShareButton
                 url={'https://github.com/zariuz'}
-                quote={'FullStack Developer'}
+                quote={'Front-End Developer'}
                 hashtag="#javascript">
                 <TwitterIcon className="mx-3" size={36} />
               </TwitterShareButton>
               <RedditShareButton
                 url={'https://github.com/zariuz'}
-                quote={'FullStack Developer'}
+                quote={'Front-End Developer'}
                 hashtag="#javascript">
                 <RedditIcon className="mx-3" size={36} />
               </RedditShareButton>
               <LinkedinShareButton
                 url={'https://github.com/zariuz'}
-                quote={'FullStack Developer'}
+                quote={'Front-End Developer'}
                 hashtag="#javascript">
                 <LinkedinIcon className="mx-3" size={36} />
               </LinkedinShareButton>

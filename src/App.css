@@ -383,7 +383,9 @@ nav ul li {
 
 /*------------ OVERFLOW BOX ------------------*/
 .portfolio-image-popupbox {
-  width: 45rem;
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 0.5rem;
 }
 

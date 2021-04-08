@@ -1,7 +1,7 @@
 import React from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faFacebookF, faGoogle} from '@fortawesome/free-brands-svg-icons';
-import {faDesktop, faFileCode} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact, faJs } from '@fortawesome/free-brands-svg-icons';
+import { faDesktop, faFileCode } from '@fortawesome/free-solid-svg-icons';
 
 const Services = () => {
   return (
@@ -12,10 +12,20 @@ const Services = () => {
           <div className="col-lg-3 col-md-6 col-sm-6">
             <div className="box">
               <div className="circle">
-                <FontAwesomeIcon className="icon" icon={faDesktop} size="2x" />
+                <FontAwesomeIcon className="icon" icon={faReact} size="2x" />
               </div>
-              <h3>Web Design</h3>
-              <p>I approach each project individually and always focus on the result.</p>
+              <h3>React</h3>
+              <p>Разработка современных SPA приложений на React + Redux</p>
+            </div>
+          </div>
+          {/* - */}
+          <div className="col-lg-3 col-md-6 col-sm-6">
+            <div className="box">
+              <div className="circle">
+                <FontAwesomeIcon className="icon" icon={faJs} size="2x" />
+              </div>
+              <h3>JavaScript</h3>
+              <p>JavaScript ES6+, а так же навыки работы с TypeScript.</p>
             </div>
           </div>
           {/* - */}
@@ -25,29 +35,18 @@ const Services = () => {
                 <FontAwesomeIcon className="icon" icon={faFileCode} size="2x" />
               </div>
 
-              <h3>Web Development</h3>
-              <p>Your website will be build with an new proven technologies.</p>
+              <h3>HTML & CSS</h3>
+              <p>Кроссбраузерная и адаптивная верстка.</p>
             </div>
           </div>
           {/* - */}
           <div className="col-lg-3 col-md-6 col-sm-6">
             <div className="box">
               <div className="circle">
-                <FontAwesomeIcon className="icon" icon={faFacebookF} size="2x" />
+                <FontAwesomeIcon className="icon" icon={faDesktop} size="2x" />
               </div>
-
-              <h3>Facebook Ads SMM</h3>
-              <p>Your potential clients well see your services or product on Facebook</p>
-            </div>
-          </div>
-          {/* - */}
-          <div className="col-lg-3 col-md-6 col-sm-6">
-            <div className="box">
-              <div className="circle">
-                <FontAwesomeIcon className="icon" icon={faGoogle} size="2x" />
-              </div>
-              <h3>Google Ads</h3>
-              <p>Your service or product will appear at the top of the Google search</p>
+              <h3>UI/UX Design</h3>
+              <p>Работа с Figma, Adobe Photoshop.</p>
             </div>
           </div>
         </div>

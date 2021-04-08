@@ -1,13 +1,13 @@
 import React from 'react';
-import netflix from '../images/netflix.png';
+import medium from '../images/medium.jpeg';
 import cityGuide from '../images/city-guide-app.png';
 import portfolio from '../images/portfolio.png';
 import taskManager from '../images/task-manager.png';
 // FONTAWESOME IMPORTS
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faSearchPlus} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearchPlus } from '@fortawesome/free-solid-svg-icons';
 // REACT POPUPBOX
-import {PopupboxManager, PopupboxContainer} from 'react-popupbox';
+import { PopupboxManager, PopupboxContainer } from 'react-popupbox';
 import 'react-popupbox/dist/react-popupbox.css';
 
 const Portfolio = () => {
@@ -17,28 +17,37 @@ const Portfolio = () => {
       <>
         <img
           className="portfolio-image-popupbox"
-          src={netflix}
-          alt="Netflix Clone Project..."
+          src={medium}
+          alt="Medium Clone на React."
         />
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex cumque illo est
           expedita quos adipisci suscipit unde itaque qui perferendis.
         </p>
+        <b>Demo:</b>{' '}
+        <a
+          className="hyper-link"
+          onClick={() =>
+            window.open('https://city-guide-app-project.herokuapp.com/', '_blank')
+          }>
+          https://vigilant-leavitt-e5d21a.netlify.app/
+        </a>
+        <br />
         <b>GitHub:</b>{' '}
         <a
           className="hyper-link"
-          onClick={() => window.open('https://github.com/8020Coding/netflix-project')}>
-          https://github.com/8020Coding/netflix-project
+          onClick={() => window.open('https://github.com/zariuz/medium-blog')}>
+          https://github.com/zariuz/medium-blog
         </a>
       </>
     );
-    PopupboxManager.open({content});
+    PopupboxManager.open({ content });
   };
 
   const popupboxConfigNetflix = {
     titleBar: {
-      enable: true,
-      text: 'Netflix clone project.',
+      enable: false,
+      text: 'Портфолио.',
     },
     fadeIn: true,
     fadeInSpeed: 500,
@@ -76,13 +85,13 @@ const Portfolio = () => {
         </a>
       </>
     );
-    PopupboxManager.open({content});
+    PopupboxManager.open({ content });
   };
 
   const popupboxConfigCityGuide = {
     titleBar: {
       enable: true,
-      text: 'City Guide App project.',
+      text: 'Портфолио.',
     },
     fadeIn: true,
     fadeInSpeed: 500,
@@ -120,13 +129,13 @@ const Portfolio = () => {
         </a>
       </>
     );
-    PopupboxManager.open({content});
+    PopupboxManager.open({ content });
   };
 
   const popupboxConfigPortfolio = {
     titleBar: {
       enable: true,
-      text: 'Poftfolio React and Material UI project.',
+      text: 'Портфолио.',
     },
     fadeIn: true,
     fadeInSpeed: 500,
@@ -164,13 +173,13 @@ const Portfolio = () => {
         </a>
       </>
     );
-    PopupboxManager.open({content});
+    PopupboxManager.open({ content });
   };
 
   const popupboxConfigTaskManager = {
     titleBar: {
       enable: true,
-      text: 'Task Manager React and Redux project.',
+      text: 'Портфолио.',
     },
     fadeIn: true,
     fadeInSpeed: 500,
@@ -182,11 +191,7 @@ const Portfolio = () => {
         <h1 className="text-uppercase text-center py-5">Портфолио</h1>
         <div className="image-box-wrapper row justify-content-center">
           <div className="portfolio-image-box" onClick={openPopupboxNetflix}>
-            <img
-              className="portfolio-image"
-              src={netflix}
-              alt="Netflix Clone Project..."
-            />
+            <img className="portfolio-image" src={medium} alt="Medium Clone на React." />
             <div className="overflow"></div>
             <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
           </div>
@@ -224,8 +229,8 @@ const Portfolio = () => {
       </div>
       <PopupboxContainer {...popupboxConfigNetflix} />
       <PopupboxContainer {...popupboxConfigCityGuide} />
-      <PopupboxContainer {...popupboxConfigPortfolio} />
       <PopupboxContainer {...popupboxConfigTaskManager} />
+      <PopupboxContainer {...popupboxConfigPortfolio} />
     </div>
   );
 };
