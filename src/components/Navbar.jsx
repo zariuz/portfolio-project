@@ -1,15 +1,16 @@
 import React from 'react';
+import {Link} from 'react-scroll';
 // REACT FONTAWESOME IMPORTS
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
       <div className="container">
-        <a className="navbar-brand" href="#">
+        <Link smooth={true} to="home" className="navbar-brand" href="#">
           <span class="logo">ЕН</span>
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -24,34 +25,44 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item active">
-              <a className="nav-link" href="#">
+              <Link smooth={true} to="home" className="nav-link" href="#">
                 Главная <span className="sr-only">(current)</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link smooth={true} to="about" offset={-83} className="nav-link" href="#">
                 Обо мне
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link
+                smooth={true}
+                to="services"
+                offset={-83}
+                className="nav-link"
+                href="#">
                 Навыки
-              </a>
+              </Link>
             </li>
-            {/* <li className="nav-item">
-              <a className="nav-link" href="#">
-                Опыт работы
-              </a>
-            </li> */}
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link
+                smooth={true}
+                to="portfolio"
+                offset={-83}
+                className="nav-link"
+                href="#">
                 Портфолио
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link
+                smooth={true}
+                to="contacts"
+                offset={-83}
+                className="nav-link"
+                href="#">
                 Контакты
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
