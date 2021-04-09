@@ -1,8 +1,8 @@
 import React from 'react';
 import medium from '../images/medium.jpeg';
-import cityGuide from '../images/city-guide-app.png';
-import portfolio from '../images/portfolio.png';
-import taskManager from '../images/task-manager.png';
+import reactPizza from '../images/pizza.jpeg';
+import socialNetwork from '../images/social_network.jpeg';
+import mobileShop from '../images/mobile.jpeg';
 // FONTAWESOME IMPORTS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearchPlus } from '@fortawesome/free-solid-svg-icons';
@@ -11,24 +11,21 @@ import { PopupboxManager, PopupboxContainer } from 'react-popupbox';
 import 'react-popupbox/dist/react-popupbox.css';
 
 const Portfolio = () => {
-  // Netflix
-  const openPopupboxNetflix = () => {
+  // Medium Clone
+  const openPopupboxMediumClone = () => {
     const content = (
       <>
-        <img
-          className="portfolio-image-popupbox"
-          src={medium}
-          alt="Medium Clone на React."
-        />
+        <img className="portfolio-image-popupbox" src={medium} alt="Medium Clone." />
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex cumque illo est
-          expedita quos adipisci suscipit unde itaque qui perferendis.
+          Проект Medium Clone на React. API проекта взято с
+          https://github.com/gothinkster/realworld . Состояние приложения реализована
+          через context.
         </p>
         <b>Demo:</b>{' '}
         <a
           className="hyper-link"
           onClick={() =>
-            window.open('https://city-guide-app-project.herokuapp.com/', '_blank')
+            window.open('https://vigilant-leavitt-e5d21a.netlify.app/', '_blank')
           }>
           https://vigilant-leavitt-e5d21a.netlify.app/
         </a>
@@ -41,148 +38,134 @@ const Portfolio = () => {
         </a>
       </>
     );
-    PopupboxManager.open({ content });
+    PopupboxManager.open({
+      content,
+      config: {
+        titleBar: {
+          enable: true,
+          text: 'Medium Clone',
+        },
+        fadeIn: true,
+        fadeInSpeed: 500,
+      },
+    });
   };
 
-  const popupboxConfigNetflix = {
-    titleBar: {
-      enable: false,
-      text: 'Портфолио.',
-    },
-    fadeIn: true,
-    fadeInSpeed: 500,
+  // Pizza Shop
+  const openPopupboxPizzaShop = () => {
+    const content = (
+      <>
+        <img className="portfolio-image-popupbox" src={reactPizza} alt="Pizza Shop" />
+        <p>Магазин пицц, на React и Redux. API и БД реализовано на Firebase.</p>
+        <b>Demo:</b>{' '}
+        <a
+          className="hyper-link"
+          onClick={() => window.open('https://pizza-shop-2be19.web.app/', '_blank')}>
+          https://pizza-shop-2be19.web.app/
+        </a>
+        <br />
+        <b>GitHub:</b>{' '}
+        <a
+          className="hyper-link"
+          onClick={() => window.open('https://github.com/zariuz/pizza-shop', '_blank')}>
+          https://github.com/zariuz/pizza-shop
+        </a>
+      </>
+    );
+    PopupboxManager.open({
+      content,
+      config: {
+        titleBar: {
+          enable: true,
+          text: 'Pizza Shop',
+        },
+        fadeIn: true,
+        fadeInSpeed: 500,
+      },
+    });
   };
 
-  // City Guide App
-  const openPopupboxCityGuide = () => {
+  // Social Network
+  const openPopupboxSocialNetwork = () => {
     const content = (
       <>
         <img
           className="portfolio-image-popupbox"
-          src={cityGuide}
-          alt="City Guide App Project..."
+          src={socialNetwork}
+          alt="Social Network"
         />
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex cumque illo est
-          expedita quos adipisci suscipit unde itaque qui perferendis.
+          Социальная сеть, на TypeScript, React и Redux. API взято с учебного проекта
+          IT-KAMASUTRA: https://social-network.samuraijs.com/.
         </p>
         <b>Demo:</b>{' '}
         <a
           className="hyper-link"
           onClick={() =>
-            window.open('https://city-guide-app-project.herokuapp.com/', '_blank')
+            window.open('https://zariuz.github.io/social-network-react/', '_blank')
           }>
-          https://city-guide-app-project.herokuapp.com/
+          https://zariuz.github.io/social-network-react/
         </a>
         <br />
         <b>GitHub:</b>{' '}
         <a
           className="hyper-link"
           onClick={() =>
-            window.open('https://github.com/8020Coding/city-guide-app', '_blank')
+            window.open('https://github.com/zariuz/social-network-react', '_blank')
           }>
-          https://github.com/8020Coding/city-guide-app
+          https://github.com/zariuz/social-network-react
         </a>
       </>
     );
-    PopupboxManager.open({ content });
+    PopupboxManager.open({
+      content,
+      config: {
+        titleBar: {
+          enable: true,
+          text: 'Social Network',
+        },
+        fadeIn: true,
+        fadeInSpeed: 500,
+      },
+    });
   };
 
-  const popupboxConfigCityGuide = {
-    titleBar: {
-      enable: true,
-      text: 'Портфолио.',
-    },
-    fadeIn: true,
-    fadeInSpeed: 500,
-  };
-
-  // Portfolio Project
-  const openPopupboxPortfolio = () => {
+  // Mobile Shop
+  const openPopupboxMobileShop = () => {
     const content = (
       <>
-        <img
-          className="portfolio-image-popupbox"
-          src={portfolio}
-          alt="Portfolio Project..."
-        />
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex cumque illo est
-          expedita quos adipisci suscipit unde itaque qui perferendis.
-        </p>
+        <img className="portfolio-image-popupbox" src={mobileShop} alt="Mobile Shop" />
+        <p>Магазин мобильных телефонов, на React и Redux.</p>
         <b>Demo:</b>{' '}
         <a
           className="hyper-link"
           onClick={() =>
-            window.open('https://portfolio-rea-and-material-ui.herokuapp.com/', '_blank')
+            window.open('https://nameless-ocean-89025.herokuapp.com/', '_blank')
           }>
-          https://portfolio-rea-and-material-ui.herokuapp.com/
+          https://nameless-ocean-89025.herokuapp.com/
         </a>
         <br />
         <b>GitHub:</b>{' '}
         <a
           className="hyper-link"
           onClick={() =>
-            window.open('https://github.com/8020Coding/portfilio', '_blank')
+            window.open('https://github.com/zariuz/mobile-shop-react-redux', '_blank')
           }>
-          https://github.com/8020Coding/portfilio
+          https://github.com/zariuz/mobile-shop-react-redux
         </a>
       </>
     );
-    PopupboxManager.open({ content });
-  };
-
-  const popupboxConfigPortfolio = {
-    titleBar: {
-      enable: true,
-      text: 'Портфолио.',
-    },
-    fadeIn: true,
-    fadeInSpeed: 500,
-  };
-
-  // Task Manager React and Redux Project
-  const openPopupboxTaskManager = () => {
-    const content = (
-      <>
-        <img
-          className="portfolio-image-popupbox"
-          src={taskManager}
-          alt="Task Manager React and Redux Project..."
-        />
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex cumque illo est
-          expedita quos adipisci suscipit unde itaque qui perferendis.
-        </p>
-        <b>Demo:</b>{' '}
-        <a
-          className="hyper-link"
-          onClick={() =>
-            window.open('https://react-redux-task-manager.herokuapp.com/', '_blank')
-          }>
-          https://react-redux-task-manager.herokuapp.com/
-        </a>
-        <br />
-        <b>GitHub:</b>{' '}
-        <a
-          className="hyper-link"
-          onClick={() =>
-            window.open('https://github.com/8020Coding/task-manager', '_blank')
-          }>
-          https://github.com/8020Coding/task-manager
-        </a>
-      </>
-    );
-    PopupboxManager.open({ content });
-  };
-
-  const popupboxConfigTaskManager = {
-    titleBar: {
-      enable: true,
-      text: 'Портфолио.',
-    },
-    fadeIn: true,
-    fadeInSpeed: 500,
+    PopupboxManager.open({
+      content,
+      config: {
+        titleBar: {
+          enable: true,
+          text: 'Mobile Shop',
+        },
+        fadeIn: true,
+        fadeInSpeed: 500,
+      },
+    });
   };
 
   return (
@@ -190,47 +173,32 @@ const Portfolio = () => {
       <div className="container">
         <h1 className="text-uppercase text-center py-5">Портфолио</h1>
         <div className="image-box-wrapper row justify-content-center">
-          <div className="portfolio-image-box" onClick={openPopupboxNetflix}>
+          <div className="portfolio-image-box" onClick={openPopupboxMediumClone}>
             <img className="portfolio-image" src={medium} alt="Medium Clone на React." />
             <div className="overflow"></div>
             <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
           </div>
           {/* - */}
-          <div className="portfolio-image-box" onClick={openPopupboxCityGuide}>
-            <img
-              className="portfolio-image"
-              src={cityGuide}
-              alt="City Guide Project..."
-            />
+          <div className="portfolio-image-box" onClick={openPopupboxPizzaShop}>
+            <img className="portfolio-image" src={reactPizza} alt="Pizza shop" />
             <div className="overflow"></div>
             <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
           </div>
           {/* - */}
-          <div className="portfolio-image-box" onClick={openPopupboxPortfolio}>
-            <img
-              className="portfolio-image"
-              src={portfolio}
-              alt="Portfolio React and Material UI Project..."
-            />
+          <div className="portfolio-image-box" onClick={openPopupboxSocialNetwork}>
+            <img className="portfolio-image" src={socialNetwork} alt="Social Network" />
             <div className="overflow"></div>
             <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
           </div>
           {/* - */}
-          <div className="portfolio-image-box" onClick={openPopupboxTaskManager}>
-            <img
-              className="portfolio-image"
-              src={taskManager}
-              alt="Task Manager React and Redux Project..."
-            />
+          <div className="portfolio-image-box" onClick={openPopupboxMobileShop}>
+            <img className="portfolio-image" src={mobileShop} alt="Mobile Shop" />
             <div className="overflow"></div>
             <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
           </div>
         </div>
       </div>
-      <PopupboxContainer {...popupboxConfigNetflix} />
-      <PopupboxContainer {...popupboxConfigCityGuide} />
-      <PopupboxContainer {...popupboxConfigTaskManager} />
-      <PopupboxContainer {...popupboxConfigPortfolio} />
+      <PopupboxContainer />
     </div>
   );
 };

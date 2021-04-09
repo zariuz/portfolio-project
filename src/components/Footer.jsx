@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import {
+  VKShareButton,
+  VKIcon,
   FacebookShareButton,
   FacebookIcon,
   TwitterShareButton,
@@ -55,28 +57,34 @@ const Footer = () => {
           </div>
           <div className="col-lg-5 col-md-5 col-sm-6 align-items-center">
             <div className="d-flex justify-content-center">
+              <VKShareButton
+                url={'https://github.com/zariuz'}
+                quote={'Front-End Developer'}
+                hashtag="#ReactJS">
+                <VKIcon className="mx-3" size={36} />
+              </VKShareButton>
               <FacebookShareButton
                 url={'https://github.com/zariuz'}
                 quote={'Front-End Developer'}
-                hashtag="#JavaScript #React">
+                hashtag="#ReactJS">
                 <FacebookIcon className="mx-3" size={36} />
               </FacebookShareButton>
               <TwitterShareButton
                 url={'https://github.com/zariuz'}
                 quote={'Front-End Developer'}
-                hashtag="#javascript">
+                hashtag="#ReactJS">
                 <TwitterIcon className="mx-3" size={36} />
               </TwitterShareButton>
               <RedditShareButton
                 url={'https://github.com/zariuz'}
                 quote={'Front-End Developer'}
-                hashtag="#javascript">
+                hashtag="#ReactJS">
                 <RedditIcon className="mx-3" size={36} />
               </RedditShareButton>
               <LinkedinShareButton
                 url={'https://github.com/zariuz'}
                 quote={'Front-End Developer'}
-                hashtag="#javascript">
+                hashtag="#ReactJS">
                 <LinkedinIcon className="mx-3" size={36} />
               </LinkedinShareButton>
             </div>
