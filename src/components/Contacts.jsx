@@ -30,9 +30,7 @@ const Contacts = () => {
     emailjs
       .send(serviceID, templateID, variables, userID)
       .then(() => {
-        setSuccessMessage(
-          "Form sent successfully! I'll contact you as soon as possible.",
-        );
+        setSuccessMessage('Форма успешно отправлена! Я свяжусь с вами как можно скорее.');
       })
       .catch((err) => console.error(`Something went wrong ${err}`));
   };
@@ -40,11 +38,8 @@ const Contacts = () => {
   return (
     <div id="contacts" className="contacts">
       <div className="text-center">
-        <h1>contact me</h1>
-        <p>
-          Please fill out the form and describe you project needs and I'll contact you as
-          soon as possible.
-        </p>
+        <h1>Контакты</h1>
+        <p>Пожалуйста, заполните форму, и я свяжусь с вами в ближайшее время.</p>
         <span className="success-message">{successMessage}</span>
       </div>
       <div className="container">
@@ -56,13 +51,14 @@ const Contacts = () => {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Name"
+                  placeholder="Имя"
                   name="name"
                   ref={register({
-                    required: 'Please enter your name',
+                    required: 'Пожалуйста, введите имя',
                     maxLength: {
                       value: 20,
-                      message: 'Please enter a name with fewer than 20 characters',
+                      message:
+                        'Пожалуйста, введите имя, состоящее менее чем из 20 символов',
                     },
                   })}
                 />
@@ -74,10 +70,10 @@ const Contacts = () => {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Phone Number"
+                  placeholder="Номер телефона"
                   name="phone"
                   ref={register({
-                    required: 'Please add your phone number',
+                    required: 'Пожалуйста, добавте свой номер телефона',
                   })}
                 />
                 <div className="line"></div>
@@ -93,10 +89,10 @@ const Contacts = () => {
                   placeholder="Email"
                   name="email"
                   ref={register({
-                    required: 'Please provide you email',
+                    required: 'Пожалуйста, укажите свой адрес электронной почты',
                     pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: 'invalid Email',
+                      message: 'Неверный адрес электронной почты',
                     },
                   })}
                 />
@@ -110,10 +106,10 @@ const Contacts = () => {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Subject"
+                  placeholder="Тема"
                   name="subject"
                   ref={register({
-                    required: 'OOPS, you forget to add the subject.',
+                    required: 'Вы забыли добавить тему',
                   })}
                 />
                 <div className="line"></div>
@@ -128,10 +124,10 @@ const Contacts = () => {
                 <textarea
                   type="text"
                   className="form-control"
-                  placeholder="Please describe shortly you project..."
+                  placeholder="Кратко опишите ваш проект..."
                   name="description"
                   ref={register({
-                    required: 'Please describe shortly your project needs...',
+                    required: 'Кратко опишите потребности вашего проекта...',
                   })}></textarea>
                 <div className="line"></div>
               </div>
@@ -139,7 +135,7 @@ const Contacts = () => {
                 {errors.description && errors.description.message}
               </span>
               <button className="btn-main-offer contact-btn" type="submit">
-                contact me
+                связаться со мной
               </button>
             </div>
           </div>
