@@ -1,7 +1,7 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faJs } from '@fortawesome/free-brands-svg-icons';
-import { faDesktop, faFileCode } from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faReact, faJs} from '@fortawesome/free-brands-svg-icons';
+import {faDesktop, faFileCode} from '@fortawesome/free-solid-svg-icons';
 
 const Services = () => {
   return (
@@ -15,7 +15,7 @@ const Services = () => {
                 <FontAwesomeIcon className="icon" icon={faReact} size="2x" />
               </div>
               <h3>React</h3>
-              <p>Разработка современных SPA приложений на React + Redux</p>
+              <p>Разработка современных SPA приложений на React / Redux / MobX</p>
             </div>
           </div>
           {/* - */}
@@ -36,7 +36,7 @@ const Services = () => {
               </div>
 
               <h3>HTML & CSS</h3>
-              <p>Кроссбраузерная и адаптивная верстка.</p>
+              <p>HTML / CSS / SCSS / Bootstrap / Material UI / адаптивная верстка.</p>
             </div>
           </div>
           {/* - */}

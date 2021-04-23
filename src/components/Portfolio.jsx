@@ -1,13 +1,15 @@
 import React from 'react';
+
 import medium from '../images/medium.jpeg';
+import theVenue from '../images/the_venue.jpeg';
 import reactPizza from '../images/pizza.jpeg';
 import socialNetwork from '../images/social_network.jpeg';
 import mobileShop from '../images/mobile.jpeg';
 // FONTAWESOME IMPORTS
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearchPlus } from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faSearchPlus} from '@fortawesome/free-solid-svg-icons';
 // REACT POPUPBOX
-import { PopupboxManager, PopupboxContainer } from 'react-popupbox';
+import {PopupboxManager, PopupboxContainer} from 'react-popupbox';
 import 'react-popupbox/dist/react-popupbox.css';
 
 const Portfolio = () => {
@@ -44,6 +46,40 @@ const Portfolio = () => {
         titleBar: {
           enable: true,
           text: 'Medium Clone',
+        },
+        fadeIn: true,
+        fadeInSpeed: 500,
+      },
+    });
+  };
+
+  // The Venue
+  const openPopupboxTheVenue = () => {
+    const content = (
+      <>
+        <img className="portfolio-image-popupbox" src={theVenue} alt="The Venue." />
+        <p>Одностраничный лендинг, музыкального события "The Venue" на React.</p>
+        <b>Demo:</b>{' '}
+        <a
+          className="hyper-link"
+          onClick={() => window.open('https://zariuz.github.io/the_venue/', '_blank')}>
+          https://zariuz.github.io/the_venue/
+        </a>
+        <br />
+        <b>GitHub:</b>{' '}
+        <a
+          className="hyper-link"
+          onClick={() => window.open('https://github.com/zariuz/the_venue')}>
+          https://github.com/zariuz/the_venue
+        </a>
+      </>
+    );
+    PopupboxManager.open({
+      content,
+      config: {
+        titleBar: {
+          enable: true,
+          text: 'The Venue',
         },
         fadeIn: true,
         fadeInSpeed: 500,
@@ -172,9 +208,15 @@ const Portfolio = () => {
     <div id="portfolio" className="portfolio-wrapper">
       <div className="container">
         <h1 className="text-uppercase text-center py-5">Портфолио</h1>
-        <div className="image-box-wrapper row justify-content-center">
+        <div className="image-box-wrapper row">
           <div className="portfolio-image-box" onClick={openPopupboxMediumClone}>
             <img className="portfolio-image" src={medium} alt="Medium Clone на React." />
+            <div className="overflow"></div>
+            <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
+          </div>
+          {/* - */}
+          <div className="portfolio-image-box" onClick={openPopupboxTheVenue}>
+            <img className="portfolio-image" src={theVenue} alt="The Venue на React." />
             <div className="overflow"></div>
             <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
           </div>

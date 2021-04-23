@@ -1,17 +1,6 @@
 import React from 'react';
-import { Link } from 'react-scroll';
-import {
-  VKShareButton,
-  VKIcon,
-  FacebookShareButton,
-  FacebookIcon,
-  TwitterShareButton,
-  TwitterIcon,
-  RedditShareButton,
-  RedditIcon,
-  LinkedinShareButton,
-  LinkedinIcon,
-} from 'react-share';
+import {Link} from 'react-scroll';
+import {VKIcon, TelegramIcon, WhatsappIcon} from 'react-share';
 
 const Footer = () => {
   return (
@@ -57,36 +46,15 @@ const Footer = () => {
           </div>
           <div className="col-lg-5 col-md-5 col-sm-6 align-items-center">
             <div className="d-flex justify-content-center">
-              <VKShareButton
-                url={'https://github.com/zariuz'}
-                quote={'Front-End Developer'}
-                hashtag="#ReactJS">
+              <a href="https://vk.com/enechetov" target="_blank" rel="noreferrer">
                 <VKIcon className="mx-3" size={36} />
-              </VKShareButton>
-              <FacebookShareButton
-                url={'https://github.com/zariuz'}
-                quote={'Front-End Developer'}
-                hashtag="#ReactJS">
-                <FacebookIcon className="mx-3" size={36} />
-              </FacebookShareButton>
-              <TwitterShareButton
-                url={'https://github.com/zariuz'}
-                quote={'Front-End Developer'}
-                hashtag="#ReactJS">
-                <TwitterIcon className="mx-3" size={36} />
-              </TwitterShareButton>
-              <RedditShareButton
-                url={'https://github.com/zariuz'}
-                quote={'Front-End Developer'}
-                hashtag="#ReactJS">
-                <RedditIcon className="mx-3" size={36} />
-              </RedditShareButton>
-              <LinkedinShareButton
-                url={'https://github.com/zariuz'}
-                quote={'Front-End Developer'}
-                hashtag="#ReactJS">
-                <LinkedinIcon className="mx-3" size={36} />
-              </LinkedinShareButton>
+              </a>
+              <a href="https://t.me/ZariuzS" target="_blank" rel="noreferrer">
+                <TelegramIcon className="mx-3" size={36} />
+              </a>
+              <a href="https://wa.me/79315433115" target="_blank" rel="noreferrer">
+                <WhatsappIcon className="mx-3" size={36} />
+              </a>
             </div>
             <p className="pt-3 text-center">
               Copyright&copy;
