@@ -227,11 +227,11 @@ const Portfolio = () => {
             <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
           </div>
           {/* - */}
-          <div className="portfolio-image-box" onClick={openPopupboxSocialNetwork}>
+          {/* <div className="portfolio-image-box" onClick={openPopupboxSocialNetwork}>
             <img className="portfolio-image" src={socialNetwork} alt="Social Network" />
             <div className="overflow"></div>
             <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
-          </div>
+          </div> */}
           {/* - */}
           <div className="portfolio-image-box" onClick={openPopupboxMobileShop}>
             <img className="portfolio-image" src={mobileShop} alt="Mobile Shop" />
