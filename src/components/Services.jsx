@@ -15,7 +15,7 @@ const Services = () => {
                 <FontAwesomeIcon className="icon" icon={faReact} size="2x" />
               </div>
               <h3>React</h3>
-              <p>Разработка современных SPA приложений на React / Redux / MobX</p>
+              <p>Разработка современных SPA приложений на React / Redux</p>
             </div>
           </div>
           {/* - */}

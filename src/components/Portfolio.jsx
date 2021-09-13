@@ -1,5 +1,6 @@
 import React from 'react';
 
+import trello from '../images/trello.jpg';
 import medium from '../images/medium.jpeg';
 import theVenue from '../images/the_venue.jpeg';
 import reactPizza from '../images/pizza.jpeg';
@@ -13,6 +14,42 @@ import {PopupboxManager, PopupboxContainer} from 'react-popupbox';
 import 'react-popupbox/dist/react-popupbox.css';
 
 const Portfolio = () => {
+  // Medium Clone
+  const openPopupboxTrelloClone = () => {
+    const content = (
+      <>
+        <img className="portfolio-image-popupbox" src={trello} alt="Trello Clone." />
+        <p>Проект Trello Clone (Канбан-доска) на React/Redux.</p>
+        <b>Demo:</b>{' '}
+        <a
+          className="hyper-link"
+          onClick={() =>
+            window.open('https://zariuz.github.io/trello-clone-react/', '_blank')
+          }>
+          https://zariuz.github.io/trello-clone-react/
+        </a>
+        <br />
+        <b>GitHub:</b>{' '}
+        <a
+          className="hyper-link"
+          onClick={() => window.open('https://github.com/zariuz/trello-clone-react')}>
+          https://github.com/zariuz/trello-clone-react
+        </a>
+      </>
+    );
+    PopupboxManager.open({
+      content,
+      config: {
+        titleBar: {
+          enable: true,
+          text: 'Trello Clone',
+        },
+        fadeIn: true,
+        fadeInSpeed: 500,
+      },
+    });
+  };
+
   // Medium Clone
   const openPopupboxMediumClone = () => {
     const content = (
@@ -132,7 +169,7 @@ const Portfolio = () => {
         />
         <p>
           Социальная сеть, на TypeScript, React и Redux. API взято с учебного проекта
-          IT-KAMASUTRA: https://social-network.samuraijs.com/.
+          IT-KAMASUTRA: https://social-network.samuraijs.com/. Проект в разработке.
         </p>
         <b>Demo:</b>{' '}
         <a
@@ -209,6 +246,12 @@ const Portfolio = () => {
       <div className="container">
         <h1 className="text-uppercase text-center py-5">Портфолио</h1>
         <div className="image-box-wrapper row">
+          <div className="portfolio-image-box" onClick={openPopupboxTrelloClone}>
+            <img className="portfolio-image" src={trello} alt="Trello Clone на React." />
+            <div className="overflow"></div>
+            <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
+          </div>
+          {/* - */}
           <div className="portfolio-image-box" onClick={openPopupboxMediumClone}>
             <img className="portfolio-image" src={medium} alt="Medium Clone на React." />
             <div className="overflow"></div>
@@ -227,11 +270,11 @@ const Portfolio = () => {
             <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
           </div>
           {/* - */}
-          {/* <div className="portfolio-image-box" onClick={openPopupboxSocialNetwork}>
+          <div className="portfolio-image-box" onClick={openPopupboxSocialNetwork}>
             <img className="portfolio-image" src={socialNetwork} alt="Social Network" />
             <div className="overflow"></div>
             <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
-          </div> */}
+          </div>
           {/* - */}
           <div className="portfolio-image-box" onClick={openPopupboxMobileShop}>
             <img className="portfolio-image" src={mobileShop} alt="Mobile Shop" />
