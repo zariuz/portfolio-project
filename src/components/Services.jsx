@@ -24,7 +24,7 @@ const Services = () => {
               <div className="circle">
                 <FontAwesomeIcon className="icon" icon={faJs} size="2x" />
               </div>
-              <h3>JavaScript</h3>
+              <h3>JavaScript / TypeScript</h3>
               <p>JavaScript ES6+, а так же навыки работы с TypeScript.</p>
             </div>
           </div>

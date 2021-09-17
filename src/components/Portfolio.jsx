@@ -159,49 +159,49 @@ const Portfolio = () => {
   };
 
   // Social Network
-  const openPopupboxSocialNetwork = () => {
-    const content = (
-      <>
-        <img
-          className="portfolio-image-popupbox"
-          src={socialNetwork}
-          alt="Social Network"
-        />
-        <p>
-          Социальная сеть, на TypeScript, React и Redux. API взято с учебного проекта
-          IT-KAMASUTRA: https://social-network.samuraijs.com/. Проект в разработке.
-        </p>
-        <b>Demo:</b>{' '}
-        <a
-          className="hyper-link"
-          onClick={() =>
-            window.open('https://zariuz.github.io/social-network-react/', '_blank')
-          }>
-          https://zariuz.github.io/social-network-react/
-        </a>
-        <br />
-        <b>GitHub:</b>{' '}
-        <a
-          className="hyper-link"
-          onClick={() =>
-            window.open('https://github.com/zariuz/social-network-react', '_blank')
-          }>
-          https://github.com/zariuz/social-network-react
-        </a>
-      </>
-    );
-    PopupboxManager.open({
-      content,
-      config: {
-        titleBar: {
-          enable: true,
-          text: 'Social Network',
-        },
-        fadeIn: true,
-        fadeInSpeed: 500,
-      },
-    });
-  };
+  // const openPopupboxSocialNetwork = () => {
+  //   const content = (
+  //     <>
+  //       <img
+  //         className="portfolio-image-popupbox"
+  //         src={socialNetwork}
+  //         alt="Social Network"
+  //       />
+  //       <p>
+  //         Социальная сеть, на TypeScript, React и Redux. API взято с учебного проекта
+  //         IT-KAMASUTRA: https://social-network.samuraijs.com/. Проект в разработке.
+  //       </p>
+  //       <b>Demo:</b>{' '}
+  //       <a
+  //         className="hyper-link"
+  //         onClick={() =>
+  //           window.open('https://zariuz.github.io/social-network-react/', '_blank')
+  //         }>
+  //         https://zariuz.github.io/social-network-react/
+  //       </a>
+  //       <br />
+  //       <b>GitHub:</b>{' '}
+  //       <a
+  //         className="hyper-link"
+  //         onClick={() =>
+  //           window.open('https://github.com/zariuz/social-network-react', '_blank')
+  //         }>
+  //         https://github.com/zariuz/social-network-react
+  //       </a>
+  //     </>
+  //   );
+  //   PopupboxManager.open({
+  //     content,
+  //     config: {
+  //       titleBar: {
+  //         enable: true,
+  //         text: 'Social Network',
+  //       },
+  //       fadeIn: true,
+  //       fadeInSpeed: 500,
+  //     },
+  //   });
+  // };
 
   // Mobile Shop
   const openPopupboxMobileShop = () => {
@@ -270,11 +270,11 @@ const Portfolio = () => {
             <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
           </div>
           {/* - */}
-          <div className="portfolio-image-box" onClick={openPopupboxSocialNetwork}>
+          {/* <div className="portfolio-image-box" onClick={openPopupboxSocialNetwork}>
             <img className="portfolio-image" src={socialNetwork} alt="Social Network" />
             <div className="overflow"></div>
             <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
-          </div>
+          </div> */}
           {/* - */}
           <div className="portfolio-image-box" onClick={openPopupboxMobileShop}>
             <img className="portfolio-image" src={mobileShop} alt="Mobile Shop" />
